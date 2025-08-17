@@ -1,0 +1,19 @@
+[Unit]
+Description=JKU Email Bot
+After=network.target
+
+[Service]
+Type=simple
+User=jhnnsrs
+WorkingDirectory=/Users/jhnnsrs/Code/scripts/jkubot
+ExecStart=/usr/bin/env uv run loop.py
+Restart=always
+RestartSec=30
+StandardOutput=journal
+StandardError=journal
+
+# Environment variables if needed
+# Environment="PATH=/usr/local/bin:/usr/bin:/bin"
+
+[Install]
+WantedBy=multi-user.target
