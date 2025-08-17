@@ -26,7 +26,7 @@ GMAIL_MAX_SIZE_BYTES = 35 * 1024 * 1024  # 35 MB
 # Loop configuration constants
 DEFAULT_INTERVAL = 200  # 3 minutes in seconds
 ACTIVE_INTERVAL = 60  # 1 minute when emails were recently found
-OFF_HOURS_INTERVAL = 400  # 15 minutes during off hours
+OFF_HOURS_INTERVAL = 200  # 3 minutes during off hours
 RETRY_DELAY = 15  # 30 seconds before retry
 MAX_RETRIES = 3  # Maximum retries before sending error notification
 ACTIVE_PERIOD_DURATION = 1800  # 30 minutes to stay in active mode after finding emails

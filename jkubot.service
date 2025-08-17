@@ -4,16 +4,14 @@ After=network.target
 
 [Service]
 Type=simple
-User=jhnnsrs
-WorkingDirectory=/Users/jhnnsrs/Code/scripts/jkubot
-ExecStart=/usr/bin/env uv run loop.py
+User=pi
+WorkingDirectory=/home/pi/jkubot
+ExecStart=/home/pi/.local/bin/uv run loop.py
 Restart=always
 RestartSec=30
 StandardOutput=journal
 StandardError=journal
-
-# Environment variables if needed
-# Environment="PATH=/usr/local/bin:/usr/bin:/bin"
+Environment="PYTHONUNBUFFERED=1"
 
 [Install]
 WantedBy=multi-user.target
